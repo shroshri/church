@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Church</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <script
+src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js">
+</script>
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>St.Josephs Church East Maitland</h1>
+<div class="bs-example">
+    <nav role="navigation" class="navbar navbar-default">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand" style="color:orange; font-size:20px;">St.Joseph Church</a>
+        </div>
+        <!-- Collection of nav links and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><%= link_to "Home", index_path %></li>
+                <li><%= link_to "About", about_path %></li>
+                <li><%= link_to "Contact", contact_path %></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><%= link_to "Admin", admin_path %></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<hr>
+<%= yield %>
+<hr>
+<h2>Footer Copyright</h2>
+</div>
+</body>
+</html>
